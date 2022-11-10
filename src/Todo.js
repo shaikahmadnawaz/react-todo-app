@@ -9,12 +9,14 @@ const style = {
   button: `cursor-pointer flex item-center`,
 };
 
-const Todo = (todo) => {
+const Todo = (props) => {
   return (
-    <li className="{style.li}">
-      <div className="{style.row}">
+    <li className={props.todo.completed ? style.liComplete : style.li}>
+      <div className={style.row}>
         <input type="checkbox" />
-        <p className="{style.text}">{todo}</p>
+        <p className={props.todo.completed ? style.textComplete : style.text}>
+          {props.todo.text}
+        </p>
       </div>
       <button>{<FaRegTrashAlt />}</button>
     </li>
