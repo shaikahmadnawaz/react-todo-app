@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 const style = {
-  li: `flex justify-between bg-slate-200 p-4 my-2 `,
+  li: `flex justify-between bg-slate-300 p-4 my-2 `,
   liComplete: `flex justify-between bg-slate-400 p-4 my-2 capitalize`,
   row: `flex`,
   text: `ml-2 cursor-pointer`,
