@@ -13,7 +13,11 @@ const Todo = ({ todo, toggleComplete }) => {
   return (
     <li className={todo.completed ? style.liComplete : style.li}>
       <div className={style.row}>
-        <input onChange={() => toggleComplete(todo)} type="checkbox" />
+        <input
+          onChange={() => toggleComplete(todo)}
+          type="checkbox"
+          checked={todo.completed ? "checked" : ""}
+        />
         <p
           onClick={() => toggleComplete(todo)}
           className={todo.completed ? style.textComplete : style.text}
