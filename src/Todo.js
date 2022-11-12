@@ -9,13 +9,16 @@ const style = {
   button: `cursor-pointer flex item-center`,
 };
 
-const Todo = (props) => {
+const Todo = ({ todo, toggleComplete }) => {
   return (
-    <li className={props.todo.completed ? style.liComplete : style.li}>
+    <li className={todo.completed ? style.liComplete : style.li}>
       <div className={style.row}>
-        <input type="checkbox" />
-        <p className={props.todo.completed ? style.textComplete : style.text}>
-          {props.todo.text}
+        <input onChange={() => toggleComplete(todo)} type="checkbox" />
+        <p
+          onClick={() => toggleComplete(todo)}
+          className={todo.completed ? style.textComplete : style.text}
+        >
+          {todo.text}
         </p>
       </div>
       <button>{<FaRegTrashAlt />}</button>
